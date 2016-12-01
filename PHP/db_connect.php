@@ -2,7 +2,7 @@
 
 //Server
 //$link = mysqli_connect("rerun","potiro","pcXZb(kL", "poti");
-$link = mysqli_connect("localhost","root","root", "poti");
+$link = mysqli_connect("localhost","root","", "uwb");
 
 if (mysqli_connect_errno())
   {
