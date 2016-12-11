@@ -11,18 +11,20 @@ var data = new FormData();
             processData: false,
             success: updateImage,
             error: function (e) {
-                alert(e.responseText);
+                //alert(e.responseText);
             }
 			});
 }
 
 function updateImage(response){
     //alert(response);
-    var dataArr = response.split(" ");
-    var yIn = parseFloat(dataArr[1]);
-    var xIn = parseFloat(dataArr[3]);
-    var roomWidth = 2.5;
-    var roomHeight = 1.4;
+    response = JSON.parse(response);
+    //alert(response[0].y);
+    //var dataArr = response.split(" ");
+    var yIn = response[0].x;
+    var xIn = response[0].y;
+    var roomWidth = response[1].height;
+    var roomHeight = response[1].width;
 
     var color = '#000000';
     var size = '20px';
