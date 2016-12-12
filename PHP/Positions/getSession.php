@@ -2,7 +2,11 @@
 include '../db_connect.php';
 global $link;
 $id = $_POST['id'];
-$position_query = "select x,y from positions where sessionId = ".$id;
+//$position_query = "select x,y from positions where sessionId = ".$id;
+// for now just get the latest run
+$position_query = "select x,y from positions where sessionId = (select max(id) from sessions)";
+
+
 $result = mysqli_query($link, $position_query);
 
 

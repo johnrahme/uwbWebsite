@@ -1,3 +1,5 @@
+var oldX = 0;
+var oldY = 0;
 function getPosition(nr,url){
 var data = new FormData();
         data.append("nr", nr);
@@ -42,11 +44,12 @@ function updateImage(response){
     var x = dx+xIn*pixelPerMeterX;
     var y = dy+yIn*pixelPerMeterY;
     $("#currentPos").html(dx+" : "+dy);
-    $("#dot")
-            .css('position', 'absolute')
-            .css('top', y + 'px')
-            .css('left', x + 'px')
-            .css('width', size)
-            .css('height', size)
-            .css('background-color', color);
+    $( "#dot" ).animate({
+        left: x,
+        top: y
+    }, 180, function() {
+        // Animation complete.
+    });
+    oldX = x;
+    oldY = y;
 }

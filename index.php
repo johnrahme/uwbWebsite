@@ -14,7 +14,7 @@
          <a href = "<?php echo $baseDir; ?>/search"><button class = "btn btn-primary">Fun stuff</button></a>
       </div>
          <div id="imageContainer" align = "middle">
-             <div id="dot"></div>
+             <div id="dot" style="position: absolute; width: 20px; height:20px;background-color: #000000"></div>
              <img id="image" align="middle" src="https://s-media-cache-ak0.pinimg.com/564x/d9/cd/60/d9cd60c5a7687ff39fb226b55f1dbb1f.jpg" class="img-responsive" alt="Cinque Terre">
          </div>
     </div>
@@ -27,7 +27,7 @@
 	
 	<script>
 
-        setInterval(updatePosition, 100);
+        setInterval(updatePosition, 200);
 
 
         function updatePosition() {

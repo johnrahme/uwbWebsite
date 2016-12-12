@@ -4,6 +4,8 @@ var data;
 var currentRoomW;
 var currentRoomH;
 var url;
+var oldX = 0;
+var oldY = 0;
 
 function setSelected(id){
     currentRoomW = 10;
@@ -45,9 +47,14 @@ function updateImageTimer() {
     var y = dy+yIn*pixelPerMeterY;
 
     $("#currentPos").html(dx+" : "+dy);
-    $("#dot")
-        .css('top', y + 'px')
-        .css('left', x + 'px');
+    $( "#dot" ).animate({
+        left: x,
+        top: y
+    }, 200, function() {
+        // Animation complete.
+    });
+    oldX = x;
+    oldY = y;
     i = i+1;
 
 }
