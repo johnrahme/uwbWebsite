@@ -10,14 +10,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">JK travels</a>
+            <a class="navbar-brand" href="#">Uwb location tracking</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li <?php if($active == "home"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>">Home</a></li>
-              <li <?php if($active == "search"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/search">Search</a></li>
-                <li <?php if($active == "bookings"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/bookings">Bookings</a></li>
-                <li <?php if($active == "about"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/about">About us</a></li>
+              <li <?php if($active == "runs"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/runs">Runs</a></li>
               <li <?php if($active == "contact"){?>class="active"<?php } ?> ><a href="#" data-toggle="modal" data-target="#myModal">Contact</a>
                 <!-- Button trigger modal --></li>
             </ul>
