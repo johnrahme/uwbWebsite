@@ -8,13 +8,13 @@
      ?>
      <div class="container clear-top" style="box-shadow: 0px 0px 5px 2px #888888; background-color: #fff; padding: 18px">
      <div class="jumbotron">
-        <h1>Welcome to the uwb website!</h1>
+        <h2>Welcome to our Ultra wide band project!</h2>
         <p id = "currentPos"></p>
-        <p>Do something fun by pressing the button below: </p>
-         <a href = "<?php echo $baseDir; ?>/search"><button class = "btn btn-primary">Fun stuff</button></a>
+        <p>Below you can see the current run live </p>
+        <!-- <a href = "<?php echo $baseDir; ?>/search"><button class = "btn btn-primary">Fun stuff</button></a>-->
       </div>
          <div id="imageContainer" align = "middle">
-             <div id="dot" style="position: absolute; width: 20px; height:20px;background-color: #000000"></div>
+             <img id="dot" style="position: absolute; width: 40px; height:40px;" src="<?php echo $rootPath.'img/personIcon.png'?>" class="img-responsive" alt="Cinque Terre" >
              <img id="image" align="middle" src="https://s-media-cache-ak0.pinimg.com/564x/d9/cd/60/d9cd60c5a7687ff39fb226b55f1dbb1f.jpg" class="img-responsive" alt="Cinque Terre">
          </div>
     </div>

@@ -27,6 +27,8 @@ function updateImage(response){
     var xIn = response[0].y;
     var roomWidth = response[1].height;
     var roomHeight = response[1].width;
+    var imageUrl = response[1].url;
+    $("#image").attr("src",""+imageUrl+"");
 
     var color = '#000000';
     var size = '20px';
@@ -43,10 +45,10 @@ function updateImage(response){
     //Invert x and y coordinates
     var x = dx+xIn*pixelPerMeterX;
     var y = dy+yIn*pixelPerMeterY;
-    $("#currentPos").html(dx+" : "+dy);
+    //$("#currentPos").html(dx+" : "+dy);
     $( "#dot" ).animate({
-        left: x,
-        top: y
+        left: x-20,
+        top: y-20
     }, 180, function() {
         // Animation complete.
     });

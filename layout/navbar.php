@@ -14,7 +14,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li <?php if($active == "home"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>">Home</a></li>
+              <li <?php if($active == "home"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/">Home</a></li>
               <li <?php if($active == "runs"){?>class="active"<?php } ?> ><a href="<?php echo $baseDir;?>/runs">Runs</a></li>
               <li <?php if($active == "contact"){?>class="active"<?php } ?> ><a href="#" data-toggle="modal" data-target="#myModal">Contact</a>
                 <!-- Button trigger modal --></li>

@@ -16,7 +16,7 @@ global $link;
             $session_result = mysqli_query($link, $session_query);
             $session_row = mysqli_fetch_assoc($session_result);
 
-            $place_query = "select width, height from places where id = ".$session_row["placeId"];
+            $place_query = "select width, height,url from places where id = ".$session_row["placeId"];
             $place_result = mysqli_query($link, $place_query);
             $place_row = mysqli_fetch_assoc($place_result);
 

@@ -3,14 +3,14 @@ var i = 0;
 var data;
 var currentRoomW;
 var currentRoomH;
-var url;
+var imgUrl;
 var oldX = 0;
 var oldY = 0;
 
-function setSelected(id){
-    currentRoomW = 10;
-    currentRoomH = 10;
-    url = "tes.jpg";
+function setSelected(theWidth, theHeight, theUrl){
+    currentRoomW = theWidth;
+    currentRoomH = theHeight;
+    url = theUrl;
 }
 function startRun(){
 
@@ -27,8 +27,8 @@ function updateImageTimer() {
 
     var yIn = data[i].x;
     var xIn = data[i].y;
-    var roomWidth = currentRoomW;
-    var roomHeight = currentRoomH;
+    var roomWidth = currentRoomH;
+    var roomHeight = currentRoomW;
 
     var color = '#000000';
     var size = '20px';
@@ -48,8 +48,8 @@ function updateImageTimer() {
 
     $("#currentPos").html(dx+" : "+dy);
     $( "#dot" ).animate({
-        left: x,
-        top: y
+        left: x-20,
+        top: y-20
     }, 200, function() {
         // Animation complete.
     });
@@ -58,7 +58,11 @@ function updateImageTimer() {
     i = i+1;
 
 }
-function getSession(id,url){
+function getSession(id ,imageUrl, placeWidth, placeHeight,url){
+    currentRoomW = placeWidth;
+    currentRoomH = placeHeight;
+    imgUrl = imageUrl;
+    $("#image").attr("src","../"+imageUrl+"");
     var data = new FormData();
     data.append("id", id);
     //alert(url);
