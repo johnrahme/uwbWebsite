@@ -28,7 +28,7 @@ function updateImage(response){
     var roomWidth = response[1].height;
     var roomHeight = response[1].width;
     var imageUrl = response[1].url;
-    $("#image").attr("src",""+imageUrl+"");
+    $("#image").attr("src",""+imageUrl+"?"+Math.random());
 
     var color = '#000000';
     var size = '20px';

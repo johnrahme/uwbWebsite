@@ -16,7 +16,7 @@
                 <div class = "panel-body">
                     <div id="imageContainer" align = "middle">
                         <img id="dot" style="position: absolute; width: 40px; height:40px;" src="<?php echo $rootPath.'img/personIcon.png'?>" class="img-responsive" alt="Cinque Terre" >
-                        <img id="image" align="middle" src="https://s-media-cache-ak0.pinimg.com/564x/d9/cd/60/d9cd60c5a7687ff39fb226b55f1dbb1f.jpg" class="img-responsive" alt="Cinque Terre">
+                        <img id="image" align="middle" src="" class="img-responsive" alt="Loading runs">
                     </div>
                     <button type="button" onclick="startRun()" class = "btn btn-success">Start</button>
                     <button type="button" onclick="stopRun()" class = "btn btn-danger">Stop</button>
